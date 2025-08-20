@@ -48,7 +48,7 @@ def show_start_screen():
 
         draw_text('Press any key to play.', 30, (RES / 3, RES - 50))
 
-        if pygame.event.get(pygame.KEYDOWN):
+        if pygame.event.get(pygame.KEYUP):
             return
         close_game()
         pygame.display.update()
@@ -62,7 +62,7 @@ def show_game_over_screen():
         draw_text('GAME OVER', 80, (RES // 4, RES // 3))
         draw_text('Press any key to restart', 40, (RES // 4, RES // 2))
         pygame.display.flip()
-        if pygame.event.get(pygame.KEYDOWN):
+        if pygame.event.get(pygame.KEYUP):
             return
         close_game()
 
@@ -120,3 +120,4 @@ while True:
 
     pygame.display.update()
     clock.tick(FPS)
+
